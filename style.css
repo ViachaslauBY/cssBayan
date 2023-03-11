@@ -27,8 +27,7 @@ body {
   padding-bottom: .5rem;  
 }
 
-.accordion__list {    
-  color: #0059d9;  
+.accordion__list {      
   list-style: none;
 }
 
@@ -52,6 +51,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #0059d9;
   transition: all .3 linear;
 }
 
@@ -95,4 +95,61 @@ body {
 .accordion__input:checked ~ .accordion__header .header__icon {
   transform: rotate(-45deg);
   filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7500%) hue-rotate(347deg) brightness(89%) contrast(111%);
+}
+
+@media (min-width: 320px) {
+  .accordion {    
+    max-width: 32rem;
+  }
+
+  .accordion__title {
+    padding-bottom: .8rem;
+    font-size: 3.2rem;
+  }
+
+  .header__title {
+    font-size: 1.6rem;
+  }
+
+  .header__icon {    
+    width: 2.5rem;
+    height: 2.5rem;    
+  }
+
+  .body__img {
+    height: 25rem;    
+  }
+
+  .accordion__input:checked ~ .accordion__body {
+    height: 26rem;
+  }
+}
+
+@media (min-width: 820px) {
+  .accordion {
+    max-width: 65rem;
+  }
+
+  .accordion__title {
+    padding-bottom: 1rem;
+    font-size: 4rem;
+  }
+
+  .header__title {
+    padding: 1.5rem 0;
+    font-size: 2.5rem;
+  }
+
+  .header__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .body__img {
+    height: 30rem;
+  }
+
+  .accordion__input:checked~.accordion__body {
+    height: 31rem;
+  }
 }
