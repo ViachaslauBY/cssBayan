@@ -47,10 +47,6 @@ body {
   border-top: .1rem solid #b9b6b6;  
 }
 
-.accordion__label {
-
-}
-
 .accordion__input {
   width: 0;
   height: 0;
@@ -62,15 +58,15 @@ body {
 .accordion__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;  
-  transition: all .3 linear;
+  align-items: center;    
 }
 
 .header__title {   
   padding: 1rem 0;
   width: 100%;
   font-size: 1rem;
-  font-weight: 700;   
+  font-weight: 700;  
+  transition: all .3s linear;
 }
 
 .header__icon {
@@ -91,12 +87,18 @@ body {
 }
 
 .body__img {   
-  height: 15rem;    
+  height: 15rem; 
+  transform: scale(.7);   
   text-align: center;
+  transition: all 0.3s linear;
 }
 
 .accordion__input:checked ~ .accordion__body {
   height: 16rem;
+}
+
+.accordion__input:checked ~ .accordion__body .body__img{
+  transform: scale(1);
 }
 
 .accordion__input:checked~.accordion__header .header__title {
@@ -114,28 +116,28 @@ body {
   }
 
   .accordion__title {   
-    font-size: 3.2rem;
+    font-size: 2.5rem;
   }
 
   .accordion__img {
-    width: 5.5rem;
+    width: 4.5rem;
   }
 
   .header__title {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .header__icon {    
-    width: 2.5rem;
-    height: 2.5rem;    
+    width: 2.2rem;
+    height: 2.2rem;    
   }
 
   .body__img {
-    height: 25rem;    
+    height: 18rem;    
   }
 
   .accordion__input:checked ~ .accordion__body {
-    height: 26rem;
+    height: 19rem;
   }
 }
 
@@ -145,11 +147,11 @@ body {
   }
 
   .accordion__title {   
-    font-size: 4rem;
+    font-size: 3.8rem;
   }
 
   .accordion__img {
-    width: 6.5rem;
+    width: 5.5rem;
   }
 
   .header__title {
@@ -173,11 +175,16 @@ body {
 
 @media (min-width: 1280px) {
   .accordion {
-    max-width: 80rem;
+    max-width: 80rem;    
+    padding: 1.7rem;
   }
 
-  .accordion__title {    
-    font-size: 5rem;
+  .accordion__info {
+    margin-bottom: 2rem;   
+  }
+
+  .accordion__title {        
+    font-size: 4.2rem;
   }
 
   .accordion__img {
@@ -186,6 +193,10 @@ body {
 
   .accordion__item:hover .accordion__body{
     height: 31rem;
+  }
+
+  .accordion__item:hover .accordion__body .body__img{
+    transform: scale(1);
   }
 
   .accordion__item:hover .header__icon {
@@ -199,6 +210,11 @@ body {
   .accordion__list:hover {
     color: #000;
   }  
+
+  .header__title {
+    padding: 2.0rem 0;  
+    font-size: 2.7rem;  
+  }
 
   .header__icon {
     opacity: 0;
