@@ -12,22 +12,34 @@
   box-sizing: border-box;
 }
 
-body {
+body {  
   font-family: "comical";
-  background-color: #f5f5eb;
+  background-color: #fdefab;  
 }
 
 .accordion {
   margin: 0 auto;  
   padding: 1rem; 
-  max-width: 25rem;  
+  max-width: 25rem;   
+}
+
+.accordion__info {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .accordion__title {
-  padding-bottom: .5rem;  
+  margin-right: 1rem;  
+  color: #ff6900;
 }
 
-.accordion__list {      
+.accordion__img {  
+  width: 3.5rem;
+}
+
+.accordion__list { 
+  color: #0059d9;
   list-style: none;
 }
 
@@ -50,8 +62,7 @@ body {
 .accordion__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #0059d9;
+  align-items: center;  
   transition: all .3 linear;
 }
 
@@ -97,14 +108,17 @@ body {
   filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7500%) hue-rotate(347deg) brightness(89%) contrast(111%);
 }
 
-@media (min-width: 320px) {
+@media (min-width: 576px) {
   .accordion {    
     max-width: 32rem;
   }
 
-  .accordion__title {
-    padding-bottom: .8rem;
+  .accordion__title {   
     font-size: 3.2rem;
+  }
+
+  .accordion__img {
+    width: 5.5rem;
   }
 
   .header__title {
@@ -125,19 +139,22 @@ body {
   }
 }
 
-@media (min-width: 820px) {
+@media (min-width: 768px) {
   .accordion {
-    max-width: 65rem;
+    max-width: 55rem;
   }
 
-  .accordion__title {
-    padding-bottom: 1rem;
+  .accordion__title {   
     font-size: 4rem;
+  }
+
+  .accordion__img {
+    width: 6.5rem;
   }
 
   .header__title {
     padding: 1.5rem 0;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .header__icon {
@@ -151,5 +168,44 @@ body {
 
   .accordion__input:checked~.accordion__body {
     height: 31rem;
+  }    
+}
+
+@media (min-width: 1280px) {
+  .accordion {
+    max-width: 80rem;
+  }
+
+  .accordion__title {    
+    font-size: 5rem;
+  }
+
+  .accordion__img {
+    width: 8.5rem;
+  }
+
+  .accordion__item:hover .accordion__body{
+    height: 31rem;
+  }
+
+  .accordion__item:hover .header__icon {
+    transform: rotate(-45deg);
+  }
+
+  .accordion__label {
+    cursor: pointer;
+  }
+
+  .accordion__list:hover {
+    color: #000;
+  }  
+
+  .header__icon {
+    opacity: 0;
+  }
+
+  .accordion__list:hover .header__icon {
+    opacity: 1;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7500%) hue-rotate(347deg) brightness(89%) contrast(111%);
   }
 }
