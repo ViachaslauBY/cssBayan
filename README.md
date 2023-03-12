@@ -1,1 +1,1 @@
-https://ViachaslauBY.github.io/cssBayan/
+https://ViachaslauBY.github.io/cssBayan/cssBayan/
